@@ -1,6 +1,7 @@
 ---
-permalink: /mathematics/
+layout: archive
 title: "Projects"
+permalink: /mathematics/
 author_profile: true
 redirect_from:
   - /math
