@@ -80,13 +80,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ahmad Alkadri"
-  avatar           : "profile.png"
-  bio              : "Chemical Engineering PhD student at UC Berkeley."
+  name             : "Ahmad M. Alkadri"
+  avatar           : "AMA-profile-photo.jpeg"
+  bio              : "Postdoctoral Scholar"
   location         : "Berkeley, CA"
-  employer         :
+  employer         : "UC Berkeley"
   pubmed           :
-  googlescholar    : # replace me in the future
+  googlescholar    : "https://scholar.google.com/citations?user=3_FE79gAAAAJ&hl=en"
   email            : "ahmadalkadri@berkeley.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/ahmad-alkadri/"
   orcid            : # replace me in the future
   pinterest        :
   soundcloud       :
