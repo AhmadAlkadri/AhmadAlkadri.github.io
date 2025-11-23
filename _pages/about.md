@@ -8,6 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-I'm a first year PhD Student at the University of California, Berkeley. In the coming years, I will look to use this website as a way of showcasing the work that I've done. My research will broadly focus on understanding Transport Phenomena in biological systems.
+I work at the intersection of applied mathematics, computation, and modelling. I completed my PhD at UC Berkeley, where my research spanned continuum mechanics, quantum algorithms for scientific computing, and numerical methods for partial differential equations. 
 
-Before starting graduate school at Berkeley, I obtained a BSc in Chemical Engineering and a BSc in Pure and Applied Mathematics from the University of Calgary. I am continuing my study of mathematics in graduate school, and will write about topics in mathetmaics that pique my interest on here from time to time.
+I’m driven by a long-standing curiosity about how mathematical structure can illuminate complex systems—whether in physical modelling or data-driven environments. This website collects some of my work, writing, and ongoing projects.
