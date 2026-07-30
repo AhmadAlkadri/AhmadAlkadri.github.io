@@ -1,0 +1,22 @@
+<ol class="publication-list">
+  {% for publication in include.publications %}
+    <li class="publication" id="{{ publication.id }}" itemscope itemtype="https://schema.org/ScholarlyArticle">
+      <article>
+        <h3 itemprop="name">{{ publication.title }}</h3>
+        <p class="publication__authors" itemprop="author">{% if publication.authors_html %}{{ publication.authors_html }}{% else %}{{ publication.authors }}{% endif %}</p>
+        <p class="publication__venue"><span class="status-label">{{ publication.status }}</span><span itemprop="isPartOf">{{ publication.venue }}</span> ({{ publication.year }})</p>
+        <p class="publication__description" itemprop="description">{{ publication.description }}</p>
+        <div class="publication__links">
+          {% if publication.doi_url %}<a href="{{ publication.doi_url }}">DOI</a>{% endif %}
+          {% if publication.arxiv_url %}<a href="{{ publication.arxiv_url }}">arXiv</a>{% endif %}
+          {% if publication.code_url %}<a href="{{ publication.code_url }}">Code</a>{% endif %}
+        </div>
+        <details>
+          <summary>Citation and BibTeX</summary>
+          <p>{{ publication.citation }}</p>
+          <pre><code>{{ publication.bibtex | escape }}</code></pre>
+        </details>
+      </article>
+    </li>
+  {% endfor %}
+</ol>

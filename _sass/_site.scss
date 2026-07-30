@@ -1,0 +1,620 @@
+/* Site-specific refresh layered over the retained Academic Pages theme. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $background-color;
+  color: $text-color;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: $link-color;
+  text-underline-offset: 0.16em;
+  text-decoration-thickness: 0.07em;
+}
+
+a:hover {
+  color: $link-color-hover;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #d28b20;
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  color: #17282b;
+  letter-spacing: -0.018em;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.35rem);
+  line-height: 1.14;
+}
+
+h2 {
+  margin-top: 2.6rem;
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+}
+
+h3 {
+  margin-top: 1.8rem;
+  font-size: 1.08rem;
+}
+
+.masthead {
+  position: sticky;
+  top: 0;
+  background: rgba(252, 252, 250, 0.98);
+  border-bottom-color: #dfe5e2;
+  box-shadow: 0 1px 0 rgba(24, 45, 47, 0.02);
+}
+
+.masthead__inner-wrap {
+  max-width: 1160px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.site-nav {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav a {
+  color: #405255;
+  font-size: 0.88rem;
+  font-weight: 550;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.site-nav__brand {
+  color: #17282b;
+  font-size: 0.96rem;
+  font-weight: 700 !important;
+  white-space: nowrap;
+}
+
+.site-nav a[aria-current="page"] {
+  color: #174f55;
+}
+
+.site-nav__links a[aria-current="page"]::after {
+  display: block;
+  height: 2px;
+  margin-top: 0.14rem;
+  background: #4d8589;
+  content: "";
+}
+
+.site-nav button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0 0.5rem;
+  border: 0;
+  background: #245f63;
+  color: #fff;
+  cursor: pointer;
+}
+
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main {
+  max-width: 1160px;
+  margin-top: 2.7rem;
+  padding-bottom: 3rem;
+}
+
+.sidebar {
+  margin-bottom: 2.4rem;
+}
+
+.author-profile {
+  max-width: 22rem;
+}
+
+.author__avatar {
+  width: 78px;
+}
+
+.author__avatar img {
+  aspect-ratio: 391 / 536;
+  border: 0;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.author__content {
+  padding-left: 1rem;
+}
+
+.sidebar .author__name {
+  margin: 0;
+  color: #17282b;
+  font-size: 1.22rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.author__bio {
+  margin: 0.35rem 0 0;
+  color: #3c5053;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.author__role {
+  margin: 0.5rem 0 0;
+  color: #657477;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.author__urls {
+  display: flex;
+  position: static;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.85rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  list-style: none;
+}
+
+.author__urls::before,
+.author__urls::after {
+  display: none;
+}
+
+.author__urls li {
+  margin: 0;
+}
+
+.author__urls a {
+  display: inline-block;
+  margin: 0;
+  padding: 0.2rem 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.moments-gallery {
+  margin-top: 2.75rem;
+}
+
+.moments-gallery__title {
+  margin: 0 0 0.75rem;
+  color: #657477;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.moments-gallery__grid {
+  display: grid;
+  grid-template-areas:
+    "hills hills hills hills hills hills hills hills hills booth booth booth"
+    "terrace terrace terrace terrace snow snow snow snow snow booth booth booth"
+    "terrace terrace terrace terrace coast coast coast canal canal canal canal canal";
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows:
+    clamp(11.5rem, 18vw, 13.75rem)
+    clamp(8rem, 12vw, 9.375rem)
+    clamp(8rem, 12vw, 9.375rem);
+  gap: 0.625rem;
+}
+
+.moments-gallery__tile {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #eef1ed;
+  border-radius: 5px;
+}
+
+.moments-gallery__tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.moments-gallery__tile--hills {
+  grid-area: hills;
+}
+
+.moments-gallery__tile--booth {
+  grid-area: booth;
+}
+
+.moments-gallery__tile--terrace {
+  grid-area: terrace;
+}
+
+.moments-gallery__tile--snow {
+  grid-area: snow;
+}
+
+.moments-gallery__tile--coast {
+  grid-area: coast;
+}
+
+.moments-gallery__tile--canal {
+  grid-area: canal;
+}
+
+.moments-gallery__tile--hills img {
+  object-position: center 58%;
+}
+
+.moments-gallery__tile--booth img {
+  object-position: center 46%;
+}
+
+.moments-gallery__tile--terrace img {
+  object-position: 38% center;
+}
+
+.moments-gallery__tile--coast img {
+  object-position: center 58%;
+}
+
+.moments-gallery__tile--canal img {
+  object-position: center 42%;
+}
+
+.page__title {
+  margin-bottom: 1.25rem;
+}
+
+.page__content {
+  max-width: 49rem;
+}
+
+.page__content h2 {
+  padding-bottom: 0.35rem;
+  border-bottom-color: #dfe5e2;
+}
+
+.page__content p,
+.page__content li,
+.archive p,
+.archive li {
+  font-size: 1rem;
+}
+
+.page__content > p,
+.page__content > ul,
+.page__content > ol {
+  max-width: 45rem;
+}
+
+.page__meta:empty {
+  display: none;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: #245f63;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 43rem;
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+.inline-links,
+.publication__links,
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-top: 0.85rem;
+}
+
+.inline-links a,
+.publication__links a,
+.project__links a {
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.research-block {
+  margin-top: 2rem;
+}
+
+.research-figure {
+  margin: 1.8rem 0 2.5rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #dfe5e2;
+  border-radius: 3px;
+}
+
+.research-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 27rem;
+  margin: 0 auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.research-figure figcaption {
+  width: 100%;
+  margin: 0.85rem 0 0;
+  color: #58686b;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.publication-list,
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.publication,
+.project {
+  padding: 1.45rem 0 1.55rem;
+  border-top: 1px solid #dfe5e2;
+}
+
+.publication:first-child,
+.project:first-child {
+  border-top: 0;
+}
+
+.publication h3,
+.project h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.publication__authors,
+.publication__venue,
+.project__status {
+  margin: 0.25rem 0;
+  color: #4f6063;
+  font-size: 0.88rem !important;
+  line-height: 1.5;
+}
+
+.publication__description,
+.project__description {
+  margin: 0.65rem 0 0;
+}
+
+.publication details {
+  margin-top: 0.8rem;
+}
+
+.publication summary {
+  width: max-content;
+  color: $link-color;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.publication pre {
+  padding: 0.9rem;
+  overflow-x: auto;
+  background: #f4f6f3;
+  border: 1px solid #dfe5e2;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  white-space: pre;
+}
+
+.status-label {
+  display: inline-block;
+  margin-right: 0.45rem;
+  padding: 0.08rem 0.42rem;
+  color: #365457;
+  background: #edf3f1;
+  border: 1px solid #cfded9;
+  border-radius: 2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.note {
+  padding: 1rem 1.1rem;
+  color: #425457;
+  background: #f3f6f3;
+  border-left: 3px solid #719397;
+}
+
+.archive {
+  max-width: 49rem;
+}
+
+.archive__item-title {
+  margin-top: 1.6rem;
+  font-size: 1.05rem;
+}
+
+.archive__item-excerpt {
+  color: #506164;
+  font-size: 0.92rem;
+}
+
+.page__footer {
+  color: #5f7073;
+  background: #f1f3ef;
+  border-top-color: #dfe5e2;
+}
+
+.page__footer footer {
+  max-width: 1160px;
+}
+
+.page__footer-follow li {
+  font-size: 0.72rem;
+  text-transform: none;
+}
+
+.page__footer-copyright {
+  margin-top: 0.4rem;
+  font-size: 0.68rem;
+}
+
+@media (max-width: 600px) {
+  .moments-gallery {
+    margin-top: 2.25rem;
+  }
+
+  .moments-gallery__grid {
+    grid-template-areas:
+      "hills hills hills"
+      "terrace terrace booth"
+      "terrace terrace booth"
+      "snow coast canal";
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows:
+      clamp(9.5rem, 42vw, 12.5rem)
+      clamp(7.5rem, 31vw, 11rem)
+      clamp(7.5rem, 31vw, 11rem)
+      clamp(6.5rem, 27vw, 9rem);
+  }
+}
+
+@media (min-width: 925px) {
+  .sidebar {
+    width: 22%;
+    margin-right: 4%;
+  }
+
+  .page,
+  .archive {
+    width: 74%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .author__avatar {
+    width: min(100%, 175px);
+  }
+
+  .author__content {
+    display: block;
+    padding: 0;
+  }
+
+  .sidebar .author__name {
+    margin-top: 1rem;
+  }
+
+  .author__urls {
+    display: block;
+  }
+
+  .author__urls li + li {
+    margin-top: 0.15rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .masthead__inner-wrap {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .site-nav button {
+    display: block;
+  }
+
+  .js .site-nav__links {
+    display: none;
+  }
+
+  .js .site-nav__links.is-open {
+    display: block;
+  }
+
+  .site-nav__links {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    right: 0;
+    left: 0;
+    padding: 0.45rem 0;
+    background: #fcfcfa;
+    border: 1px solid #dfe5e2;
+    box-shadow: 0 8px 20px rgba(24, 45, 47, 0.1);
+  }
+
+  .site-nav__links li {
+    margin: 0;
+  }
+
+  .site-nav__links a {
+    display: block;
+    padding: 0.62rem 0.9rem;
+  }
+
+  .site-nav__links a[aria-current="page"]::after {
+    display: none;
+  }
+
+  #main {
+    margin-top: 1.6rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .research-figure {
+    padding: 0.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

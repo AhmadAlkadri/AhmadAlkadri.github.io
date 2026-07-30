@@ -1,0 +1,98 @@
+- id: membrane-permeability-osmosis
+  group: published
+  title: "Irreversible thermodynamics of curved lipid membranes. II. Permeability and osmosis"
+  authors: "Ahmad M. Alkadri and Kranthi K. Mandadapu"
+  authors_html: "<strong>Ahmad M. Alkadri</strong> and Kranthi K. Mandadapu"
+  venue: "Physical Review E 112(3), 034413"
+  year: 2025
+  status: "Journal article"
+  doi: "10.1103/wfj9-7l6r"
+  doi_url: "https://doi.org/10.1103/wfj9-7l6r"
+  arxiv: "2412.19300"
+  arxiv_url: "https://arxiv.org/abs/2412.19300"
+  description: "Derives entropy production, force–flux relations, constitutive laws, and boundary conditions for coupled membrane mechanics, permeability, and multicomponent bulk transport on curved, deforming interfaces."
+  citation: "Alkadri, A. M. and Mandadapu, K. K. (2025). Physical Review E, 112, 034413."
+  bibtex: |
+    @article{alkadri2025membranes,
+      author = {Alkadri, Ahmad M. and Mandadapu, Kranthi K.},
+      title = {Irreversible thermodynamics of curved lipid membranes. II. Permeability and osmosis},
+      journal = {Physical Review E},
+      volume = {112},
+      number = {3},
+      pages = {034413},
+      year = {2025},
+      doi = {10.1103/wfj9-7l6r}
+    }
+
+- id: block-encodings-elliptic-operators
+  group: published
+  title: "Explicit block encodings of boundary value problems for many-body elliptic operators"
+  authors: "Tyler Kharazi, Ahmad M. Alkadri, Jin-Peng Liu, Kranthi K. Mandadapu, and K. Birgitta Whaley"
+  authors_html: "Tyler Kharazi, <strong>Ahmad M. Alkadri</strong>, Jin-Peng Liu, Kranthi K. Mandadapu, and K. Birgitta Whaley"
+  venue: "Quantum 9, 1764"
+  year: 2025
+  status: "Journal article"
+  doi: "10.22331/q-2025-06-04-1764"
+  doi_url: "https://doi.org/10.22331/q-2025-06-04-1764"
+  arxiv: "2407.18347"
+  arxiv_url: "https://arxiv.org/abs/2407.18347"
+  code_url: "https://github.com/Kharazitd/BlockEncodingDemos"
+  description: "Constructs explicit quantum circuits for discretized elliptic operators, including separable boundary conditions, higher-order schemes, irregular-domain projections, and many-body convective terms."
+  citation: "Kharazi, T., Alkadri, A. M., Liu, J.-P., Mandadapu, K. K., and Whaley, K. B. (2025). Quantum, 9, 1764."
+  bibtex: |
+    @article{kharazi2025blockencodings,
+      author = {Kharazi, Tyler and Alkadri, Ahmad M. and Liu, Jin-Peng and Mandadapu, Kranthi K. and Whaley, K. Birgitta},
+      title = {Explicit block encodings of boundary value problems for many-body elliptic operators},
+      journal = {Quantum},
+      volume = {9},
+      pages = {1764},
+      year = {2025},
+      doi = {10.22331/q-2025-06-04-1764}
+    }
+
+- id: reaction-rate-quantum-algorithm
+  group: preprint
+  title: "Provable Quantum Speedups for Reaction-Rate Estimation in High-Dimensional Fokker-Planck Dynamics"
+  authors: "Tyler Kharazi, Ahmad M. Alkadri, Kranthi K. Mandadapu, and K. Birgitta Whaley"
+  authors_html: "Tyler Kharazi, <strong>Ahmad M. Alkadri</strong>, Kranthi K. Mandadapu, and K. Birgitta Whaley"
+  venue: "arXiv:2601.15523v2"
+  year: 2026
+  status: "Preprint"
+  arxiv: "2601.15523"
+  arxiv_url: "https://arxiv.org/abs/2601.15523"
+  description: "Develops Gaussian-LCHS propagation and matrix-element estimation for reaction rates and dynamical correlations in high-dimensional Fokker–Planck systems, with an explicit comparison to worst-case classical guarantees."
+  citation: "Kharazi, T., Alkadri, A. M., Mandadapu, K. K., and Whaley, K. B. (2026). arXiv:2601.15523v2."
+  bibtex: |
+    @misc{kharazi2026reactionrates,
+      author = {Kharazi, Tyler and Alkadri, Ahmad M. and Mandadapu, Kranthi K. and Whaley, K. Birgitta},
+      title = {Provable Quantum Speedups for Reaction-Rate Estimation in High-Dimensional Fokker-Planck Dynamics},
+      year = {2026},
+      eprint = {2601.15523},
+      archivePrefix = {arXiv},
+      primaryClass = {quant-ph},
+      url = {https://arxiv.org/abs/2601.15523}
+    }
+
+- id: qu-fem
+  group: preprint
+  title: "A Quantum Algorithm for the Finite Element Method"
+  authors: "Ahmad M. Alkadri, Tyler D. Kharazi, K. Birgitta Whaley, and Kranthi K. Mandadapu"
+  authors_html: "<strong>Ahmad M. Alkadri</strong>, Tyler D. Kharazi, K. Birgitta Whaley, and Kranthi K. Mandadapu"
+  venue: "arXiv:2510.18150v1"
+  year: 2025
+  status: "Preprint"
+  arxiv: "2510.18150"
+  arxiv_url: "https://arxiv.org/abs/2510.18150"
+  code_url: "https://github.com/AhmadAlkadri/Qu-FEM"
+  description: "Introduces quantum primitives for local-to-global finite-element assembly, spatially varying coefficients, and Lagrange-multiplier boundary conditions while retaining the method's geometric flexibility."
+  citation: "Alkadri, A. M., Kharazi, T. D., Whaley, K. B., and Mandadapu, K. K. (2025). arXiv:2510.18150v1."
+  bibtex: |
+    @misc{alkadri2025qufem,
+      author = {Alkadri, Ahmad M. and Kharazi, Tyler D. and Whaley, K. Birgitta and Mandadapu, Kranthi K.},
+      title = {A Quantum Algorithm for the Finite Element Method},
+      year = {2025},
+      eprint = {2510.18150},
+      archivePrefix = {arXiv},
+      primaryClass = {quant-ph},
+      url = {https://arxiv.org/abs/2510.18150}
+    }

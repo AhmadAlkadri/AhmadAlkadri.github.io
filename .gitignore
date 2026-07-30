@@ -1,4 +1,16 @@
 _site/
 vendor/
 .bundle/
+.jekyll-cache/
+.jekyll-metadata
 .DS_Store
+node_modules/
+output/
+.playwright-cli/
+
+# Local camera originals for the homepage moments banner.
+images/banner/*.HEIC
+
+# Local source material used while developing the website.
+# May contain unpublished papers, figures, notes, media, or local-only references.
+local-sources/
