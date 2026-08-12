@@ -34,6 +34,10 @@
   grid-template-columns: minmax(0, 1fr);
 }
 
+.article__body--toc .article-toc {
+  order: -1;
+}
+
 .article__header {
   width: 100%;
   max-width: 47rem;
@@ -339,6 +343,7 @@
     position: sticky;
     top: 5.5rem;
     padding-top: 0.25rem;
+    order: 0;
   }
 
   .article-toc__desktop { display: block; }
