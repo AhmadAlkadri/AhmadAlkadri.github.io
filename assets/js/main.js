@@ -72,4 +72,75 @@
       }
     });
   });
+
+  var toc = document.querySelector("[data-article-toc]");
+
+  if (toc) {
+    var articleContent = document.querySelector(".article__content");
+    var headings = articleContent ? Array.prototype.slice.call(articleContent.querySelectorAll("h2")) : [];
+    var tocLists = toc.querySelectorAll("[data-article-toc-list]");
+    var activeHeading = null;
+    var ticking = false;
+
+    if (headings.length && tocLists.length) {
+      Array.prototype.forEach.call(tocLists, function (list) {
+        headings.forEach(function (heading) {
+          if (!heading.id) return;
+
+          var item = document.createElement("li");
+          var link = document.createElement("a");
+          link.href = "#" + heading.id;
+          link.textContent = heading.textContent;
+          item.appendChild(link);
+          list.appendChild(item);
+        });
+      });
+
+      toc.hidden = false;
+
+      function setActiveHeading(heading) {
+        if (!heading || heading === activeHeading) return;
+        activeHeading = heading;
+
+        Array.prototype.forEach.call(toc.querySelectorAll("a"), function (link) {
+          var isActive = link.getAttribute("href") === "#" + heading.id;
+          link.classList.toggle("is-active", isActive);
+          if (isActive) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      }
+
+      function updateActiveHeading() {
+        ticking = false;
+        var masthead = document.querySelector(".masthead");
+        var offset = (masthead ? masthead.getBoundingClientRect().height : 0) + 24;
+        var current = headings[0];
+
+        headings.forEach(function (heading) {
+          if (heading.getBoundingClientRect().top <= offset) current = heading;
+        });
+
+        setActiveHeading(current);
+      }
+
+      function requestActiveHeadingUpdate() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(updateActiveHeading);
+      }
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(requestActiveHeadingUpdate, {
+          rootMargin: "-15% 0px -70% 0px",
+          threshold: 0
+        });
+        headings.forEach(function (heading) { observer.observe(heading); });
+      }
+
+      window.addEventListener("scroll", requestActiveHeadingUpdate, { passive: true });
+      window.addEventListener("resize", requestActiveHeadingUpdate);
+      window.addEventListener("hashchange", requestActiveHeadingUpdate);
+      requestActiveHeadingUpdate();
+    }
+  }
 }());

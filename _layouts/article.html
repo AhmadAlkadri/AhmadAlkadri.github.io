@@ -4,8 +4,8 @@ layout: default
 
 {% include base_path %}
 
-<div id="main" class="article-page" role="main">
-  <article class="article" itemscope itemtype="https://schema.org/BlogPosting">
+<div id="main" class="article-page{% if page.toc %} article-page--toc{% endif %}" role="main">
+  <article class="article{% if page.toc %} article--toc{% endif %}" itemscope itemtype="https://schema.org/BlogPosting">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
@@ -21,10 +21,14 @@ layout: default
       </div>
     </header>
 
-    <section class="article__content page__content" itemprop="articleBody">
-      {{ content }}
-      {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-    </section>
+    <div class="article__body{% if page.toc %} article__body--toc{% endif %}">
+      <section class="article__content page__content" itemprop="articleBody">
+        {{ content }}
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+      </section>
+
+      {% if page.toc %}{% include article-toc.html %}{% endif %}
+    </div>
 
     {% if page.tags or page.categories %}
       <footer class="article__footer">
