@@ -113,12 +113,19 @@
       function updateActiveHeading() {
         ticking = false;
         var masthead = document.querySelector(".masthead");
-        var offset = (masthead ? masthead.getBoundingClientRect().height : 0) + 24;
+        var mastheadOffset = (masthead ? masthead.getBoundingClientRect().height : 0) + 24;
+        var headingStyle = headings[0] ? window.getComputedStyle(headings[0]) : null;
+        var scrollMargin = headingStyle ? parseFloat(headingStyle.scrollMarginTop) || 0 : 0;
+        var offset = Math.max(mastheadOffset, scrollMargin);
         var current = headings[0];
 
         headings.forEach(function (heading) {
           if (heading.getBoundingClientRect().top <= offset) current = heading;
         });
+
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+          current = headings[headings.length - 1];
+        }
 
         setActiveHeading(current);
       }

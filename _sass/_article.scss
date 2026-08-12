@@ -113,6 +113,7 @@
   margin-top: 3.6rem;
   margin-bottom: 1.15rem;
   font-size: clamp(1.55rem, 3vw, 2.1rem);
+  scroll-margin-top: 6.5rem;
 }
 
 .article__content h3 {
@@ -146,6 +147,18 @@
   max-width: 47rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+.article__content > .technical-figure {
+  max-width: 47rem;
+}
+
+.technical-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--technical-figure-ratio, 16 / 9);
+  object-fit: contain;
 }
 
 .article__content .highlighter-rouge,

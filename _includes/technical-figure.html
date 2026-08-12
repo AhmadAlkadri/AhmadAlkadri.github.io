@@ -1,7 +1,8 @@
 {% include base_path %}
 {% assign figure_class = "technical-figure" %}
 {% if include.wide %}{% assign figure_class = figure_class | append: " article__wide" %}{% endif %}
-<figure class="{{ figure_class }}"{% if include.caption %} aria-labelledby="technical-figure-caption-{{ include.src | slugify }}"{% endif %}>
+{% assign figure_ratio = include.ratio | default: "16 / 9" %}
+<figure class="{{ figure_class }}" style="--technical-figure-ratio: {{ figure_ratio }};"{% if include.caption %} aria-labelledby="technical-figure-caption-{{ include.src | slugify }}"{% endif %}>
   <img src="{{ include.src | prepend: base_path }}" alt="{{ include.alt | escape }}" loading="lazy">
   {% if include.caption %}<figcaption id="technical-figure-caption-{{ include.src | slugify }}">{{ include.caption }}</figcaption>{% endif %}
 </figure>
