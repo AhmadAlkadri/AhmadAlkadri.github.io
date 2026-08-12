@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ahmad M. Alkadri"
+title                    : "Ahmad Majed Alkadri"
 title_separator          : "-"
 name                     : &name "Ahmad M. Alkadri"
 description              : &description "Ahmad M. Alkadri is a researcher, engineer, and mathematician working in continuum mechanics, scientific computing, and quantum algorithms."
@@ -144,7 +144,6 @@ exclude:
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
-  - assets/fonts
   - assets/css/academicons.css
   - assets/css/academicons.min.css
   - assets/css/collapse.css

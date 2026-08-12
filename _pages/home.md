@@ -11,6 +11,23 @@ author_profile: true
 
 I also build scientific software, tools for mathematical visualization, and practical workflows for agent-assisted engineering. This site brings together my research, publications, projects, and writing.
 
+{% if site.posts.size > 0 %}
+<section class="recent-writing" aria-labelledby="recent-writing-title">
+  <div class="recent-writing__header">
+    <h2 id="recent-writing-title" class="recent-writing__title">Recent writing</h2>
+    <a class="recent-writing__archive-link" href="{{ '/blog/' | relative_url }}">Blog</a>
+  </div>
+  <ol class="recent-writing__list">
+    {% for post in site.posts limit:3 %}
+      <li class="recent-writing__item">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <time class="recent-writing__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
 <section class="moments-gallery" aria-labelledby="moments-gallery-title">
   <h2 id="moments-gallery-title" class="moments-gallery__title">Moments</h2>
   <div class="moments-gallery__grid">

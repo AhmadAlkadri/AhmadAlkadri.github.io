@@ -334,6 +334,80 @@ h3 {
   line-height: 1.65;
 }
 
+.recent-writing {
+  max-width: 43rem;
+  margin-top: 2.75rem;
+}
+
+.recent-writing__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.recent-writing__title {
+  margin: 0;
+  color: #657477;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.recent-writing__archive-link {
+  color: #657477;
+  font-size: 0.78rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.recent-writing__list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #dfe5e2;
+  list-style: none;
+}
+
+.recent-writing__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.72rem 0;
+  border-bottom: 1px solid #dfe5e2;
+}
+
+.recent-writing__item a {
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.recent-writing__date {
+  flex: 0 0 auto;
+  color: #657477;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.thin-slices-repository {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42em;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.thin-slices-repository__icon {
+  display: inline-block;
+  color: #405255;
+  font-size: 0.9em;
+  font-style: normal;
+  line-height: 1;
+}
+
 .inline-links,
 .publication__links,
 .project__links {
@@ -496,6 +570,19 @@ h3 {
 }
 
 @media (max-width: 600px) {
+  .recent-writing {
+    margin-top: 2.25rem;
+  }
+
+  .recent-writing__item {
+    display: block;
+  }
+
+  .recent-writing__date {
+    display: block;
+    margin-top: 0.2rem;
+  }
+
   .moments-gallery {
     margin-top: 2.25rem;
   }

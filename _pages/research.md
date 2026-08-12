@@ -39,7 +39,7 @@ The framework treats periodic, Dirichlet, Neumann, and Robin conditions; higher-
 
 <figure class="research-figure">
   <img src="{{ '/images/research/block-encoding-irregular-domain.svg' | relative_url }}"
-       alt="Computed Poisson solution on an L-shaped domain, shown as a two-dimensional color field."
+       alt="Computed Poisson solution on an L-shaped domain, shown as a two-dimensional colour field."
        width="576" height="384" loading="lazy" decoding="async">
   <figcaption>A numerical Poisson solution on an irregular L-shaped domain using the projection construction studied in the block-encoding paper. Reproduced from the published figure source.</figcaption>
 </figure>

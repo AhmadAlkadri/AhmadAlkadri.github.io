@@ -9,8 +9,6 @@ redirect_from:
   - /wordpress/blog-posts/
 ---
 
-I use this space for occasional dated notes. The previous entries in this repository were upstream template demonstrations, so no posts are currently published.
-
 {% if site.posts.size > 0 %}
   {% for post in site.posts %}
     {% include archive-single.html %}

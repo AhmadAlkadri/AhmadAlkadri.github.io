@@ -1,0 +1,26 @@
+---
+config:
+  theme: base
+  themeVariables:
+    background: '#fcfcfa'
+    primaryColor: '#e8f1ef'
+    primaryBorderColor: '#245f63'
+    primaryTextColor: '#263437'
+    lineColor: '#245f63'
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    fontSize: '16px'
+---
+flowchart LR
+    A["Goal / uncertainty"] --> B["Bound the slice"]
+    B --> C["Define evidence"]
+    C --> D["Execute"]
+    D --> E["Verify"]
+    E -->|passes| F["Checkpoint"]
+    E -->|fails / blocked| G["Record what was learned"]
+    F --> H["Stop"]
+    G --> H
+
+    classDef node fill:#e8f1ef,stroke:#245f63,color:#263437;
+    classDef terminal fill:#245f63,stroke:#174f55,color:#ffffff;
+    class A,B,C,D,E,F,G node;
+    class H terminal;
