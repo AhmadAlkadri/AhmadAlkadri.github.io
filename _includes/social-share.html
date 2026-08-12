@@ -1,13 +1,28 @@
 {% include base_path %}
+{% assign share_url = base_path | append: page.url %}
+{% assign share_text = page.title | default: site.title | append: " — " | append: share_url %}
 
-<section class="page__share">
-  {% if site.data.ui-text[site.locale].share_on_label %}
-    <h4 class="page__share-title">{{ site.data.ui-text[site.locale].share_on_label | default: "Share on" }}</h4>
-  {% endif %}
+<section class="page__share" aria-labelledby="page-share-title">
+  <h2 id="page-share-title" class="page__share-title">Share this article</h2>
+  <div class="page__share-actions">
+    <a class="share-action" href="https://x.com/intent/tweet?url={{ share_url | url_encode }}&amp;text={{ page.title | default: site.title | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share this article on X">
+      <span class="share-action__mark" aria-hidden="true">X</span>
+      <span class="visually-hidden">Share on X</span>
+    </a>
 
-  <a href="https://twitter.com/intent/tweet?text={{ base_path }}{{ page.url }}" class="btn btn--twitter" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a class="share-action" href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share this article on LinkedIn">
+      <span class="share-action__mark" aria-hidden="true">in</span>
+      <span class="visually-hidden">Share on LinkedIn</span>
+    </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ base_path }}{{ page.url }}" class="btn btn--facebook" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+    <a class="share-action" href="https://bsky.app/intent/compose?text={{ share_text | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share this article on Bluesky">
+      <span class="share-action__mark" aria-hidden="true">bsky</span>
+      <span class="visually-hidden">Share on Bluesky</span>
+    </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ base_path }}{{ page.url }}" class="btn btn--linkedin" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+    <button class="share-action share-action--copy" type="button" data-copy-link data-copy-url="{{ share_url | escape }}" aria-label="Copy article link">
+      <span aria-hidden="true">Copy link</span>
+      <span class="visually-hidden" data-copy-feedback aria-live="polite"></span>
+    </button>
+  </div>
 </section>

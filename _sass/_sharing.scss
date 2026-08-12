@@ -1,0 +1,67 @@
+/* ==========================================================================
+   ARTICLE SHARING
+   ========================================================================== */
+
+.page__share {
+  padding-top: 1.25rem;
+  border-top: 1px solid $border-color;
+}
+
+.page__share-title {
+  margin: 0 0 0.8rem;
+  color: mix(#fff, $text-color, 30%);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page__share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.share-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0.42rem 0.72rem;
+  color: $text-color !important;
+  font-family: $sans-serif;
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none !important;
+  background: transparent;
+  border: 1px solid #d5e0dc;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.share-action:hover {
+  color: $primary-color !important;
+  background: #f1f5f2;
+  border-color: #9bb8b4;
+}
+
+.share-action:focus-visible {
+  outline: 3px solid rgba($primary-color, 0.3);
+  outline-offset: 2px;
+}
+
+.share-action__mark {
+  font-size: 0.88rem;
+  letter-spacing: -0.02em;
+}
+
+.share-action--copy {
+  font-size: 0.78rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .share-action {
+    transition: none;
+  }
+}
