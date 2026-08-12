@@ -5,6 +5,8 @@
 .article-page {
   @include container;
   @include clearfix;
+  box-sizing: border-box;
+  width: 100%;
   margin-top: clamp(2.5rem, 7vw, 5.5rem);
   padding-right: 1rem;
   padding-left: 1rem;
@@ -17,11 +19,14 @@
 }
 
 .article {
+  box-sizing: border-box;
+  width: 100%;
   max-width: 72rem;
   margin: 0 auto;
 }
 
 .article__header {
+  width: 100%;
   max-width: 47rem;
   margin: 0 auto clamp(2.75rem, 7vw, 5rem);
 }
@@ -55,6 +60,7 @@
 }
 
 .article__content {
+  width: 100%;
   max-width: 72rem;
   margin: 0 auto;
 }
@@ -69,6 +75,8 @@
 .article__content > blockquote,
 .article__content > hr {
   max-width: 47rem;
+  width: 100%;
+  box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
 }
