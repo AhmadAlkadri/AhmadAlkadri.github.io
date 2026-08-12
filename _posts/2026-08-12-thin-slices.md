@@ -3,7 +3,7 @@ title: 'Thin Slices: A Guiding Philosophy for Agentic Engineering'
 date: 2026-08-12
 layout: article
 permalink: /posts/2026/08/thin-slices/
-excerpt: 'Agents can generate implementation faster than humans can evaluate it. Thin slicing structures agentic work around small, verifiable units that bring human judgment back into the loop early.'
+excerpt: 'Agents can generate implementation faster than humans can evaluate it. Thin slicing structures agentic work around small, verifiable units that bring human judgment back into the loop early. [View the Thin Slices repository](https://github.com/AhmadAlkadri/thin-slices).'
 tags:
   - agentic engineering
   - workflow
