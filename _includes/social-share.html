@@ -1,5 +1,6 @@
 {% include base_path %}
-{% assign share_url = base_path | append: page.url %}
+{% assign share_origin = site.url | default: site.github.url | append: site.baseurl %}
+{% assign share_url = share_origin | append: page.url %}
 {% assign share_text = page.title | default: site.title | append: " — " | append: share_url %}
 
 <section class="page__share" aria-labelledby="page-share-title">
