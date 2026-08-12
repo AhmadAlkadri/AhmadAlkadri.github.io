@@ -6,3 +6,20 @@
 <link rel="apple-touch-icon" href="{{ base_path }}/images/site-logo.png">
 <link rel="manifest" href="{{ base_path }}/images/manifest.json">
 <meta name="theme-color" content="#fcfcfa">
+
+{% if page.math %}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
