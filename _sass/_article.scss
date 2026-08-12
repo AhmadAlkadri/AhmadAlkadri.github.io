@@ -165,6 +165,28 @@
   object-fit: contain;
 }
 
+.technical-figure--text pre {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 47rem;
+  margin: 0;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  background: #f4f6f3;
+  border: 1px solid #dfe5e2;
+  border-radius: 6px;
+  color: $text-color;
+  font-family: $monospace;
+  font-size: clamp(0.75rem, 1.15vw, 1rem);
+  line-height: 1.4;
+  text-align: center;
+  white-space: pre;
+}
+
+.technical-figure--text code {
+  color: inherit;
+}
+
 .article__content .highlighter-rouge,
 .article__content figure.highlight {
   width: 100%;
@@ -383,6 +405,12 @@
   .article__content .highlighter-rouge .highlight,
   .article__content figure.highlight .highlight {
     font-size: 0.9rem;
+  }
+
+  .technical-figure--text pre {
+    padding: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.35;
   }
 
   .article-toc__desktop {
